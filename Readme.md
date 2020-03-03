@@ -1,4 +1,4 @@
-###Installation  
+### Installation  
 
 Install Python3 if it's not yet there.  
 To do this on Ubuntu, run:  
@@ -33,7 +33,7 @@ For more details please follow:
 https://pypi.org/project/xmltodict/  
 https://pypi.org/project/Shapely/  
 
-###Running  
+### Running  
 
 From the current directory, run:  
 python3 max_states.py --input locations.xml --output mapped.json --states states/*.wkt  
