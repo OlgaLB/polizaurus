@@ -64,7 +64,7 @@ def map_location_to_state(input_xml, states):
 
 def create_json(output_json, mapped_states):
     """
-        creates a json file with the mapped locations and states.
+        Creates a json file with the mapped locations and states.
         
         Parameters:
             output_json : str
