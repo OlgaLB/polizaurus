@@ -13,13 +13,20 @@ from shapely.geometry import Point
 from shapely.geometry.polygon import Polygon
 
 
-# function to create a dictionary of locations and states they belong to
-# input parameters: 
-# input_xml - xml file with locations and their latitude, longitude
-# states - list of files with state coordinates
-# output parameters:
-# mapped_states - dictionary of mapped locations and states
 def map_location_to_state(input_xml, states):
+    """
+        Creates a dictionary of locations and states they belong to.
+        
+        Parameters:
+            input_xml : str
+                Path to xml file with locations and their latitude, longitude.
+            states : list of str
+                List of files with state coordinates
+         
+        Output:
+            mapped_states : dict
+                Dictionary of mapped locations and states
+    """
     # dictionary to save location:state pairs
     mapped_states = {}
     # root element within input xml file that contains location, latitude and longitude
@@ -55,11 +62,16 @@ def map_location_to_state(input_xml, states):
     return mapped_states
 
 
-# function to create a json file with the mapped locations and states
-# input parameters: 
-# output_json - json file to be created
-# mapped_states - dictionary of data to be written to the json file
 def create_json(output_json, mapped_states):
+    """
+        creates a json file with the mapped locations and states.
+        
+        Parameters:
+            output_json : str
+                Path to json file to be created.
+            mapped_states : dict
+                Dictionary of data to be written to the json file.
+    """
     # open file with for writing
     with open(output_json, 'w', encoding='utf-8') as mapped_json:
         # write dictionary to the file as a json
