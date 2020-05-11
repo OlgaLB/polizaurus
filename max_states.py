@@ -3,11 +3,8 @@
 import xml.etree.ElementTree
 import xmltodict
 import json
-
 import os
-
 import argparse
-
 import shapely.wkt
 from shapely.geometry import Point
 from shapely.geometry.polygon import Polygon
